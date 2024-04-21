@@ -1,0 +1,1 @@
+1. Add alt text to all images

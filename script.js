@@ -13,16 +13,17 @@ var carouselDesc = {
 
 //initial setup
 let index = 0;
-const allegoriesImages = carouselImg;
+
+//basic functions
 function getId(id) {
     return document.getElementById(id);
-}
-function isHidden(elementID) {
-    // console.log(document.getElementById(elementID).classList.contains("hidden"));
-    return document.getElementById(elementID).classList.contains("hidden");
+};
 
-}
+function isHidden(id) {
+    return getId(id).classList.contains("hidden");
+};
 
+//make sure index is correct
 console.log("Starting index", index);
 
 function carouselData(key, carousel, carCap) {
@@ -36,15 +37,32 @@ function carouselData(key, carousel, carCap) {
     curCap.innerText = `${carouselDesc[key][index]}`;
 
     // Use modulo to cycle through images
-    index = (index + (carouselImg[key].length-1)) % (carouselImg[key].length-1); 
+    index = (index + (carouselImg[key].length - 1)) % (carouselImg[key].length - 1);
 
-    if (index === 0){
-        if(isHidden(getId(`${key}Placeholder`)))
-        getId(`${key}Placeholder`).classList.remove('hidden');
+    if (index === 0) {
+        if (isHidden(getId(`${key}Placeholder`)))
+            getId(`${key}Placeholder`).classList.remove('hidden');
     }
-    else{
-        if(!isHidden(getId(`${key}Placeholder`)))
-        getId(`${key}Placeholder`).classList.add('hidden');
+    else if (!isHidden(getId(`${key}Placeholder`))){
+           getId(`${key}Placeholder`).classList.add('hidden');
+    }
+};
+
+function carouselDiscriminator() {
+    const allCarousel = getId("allCarousel");
+    const bruxCarousel = getId("bruxCarousel");
+    const myoCarousel = getId("myoCarousel");
+
+    switch (true) {
+        case allCarousel !== null:
+            carouselData("allegories", "allCarousel", "allCap");
+            break;
+        case bruxCarousel !== null:
+            carouselData("bruxist", "bruxCarousel", "bruxCap");
+            break;
+        case myoCarousel !== null:
+            carouselData("myopic", "myoCarousel", "myoCap");
+            break;
     }
 };
 
@@ -56,31 +74,34 @@ addEventListener("click", function (event) {
 
     switch (event.target.id) {
         case "allFor":
-            index = (index + 1) % (carouselImg.allegories.length-1);
+            index = (index + 1) % (carouselImg.allegories.length - 1);
             break;
         case "bruxFor":
-            index = (index + 1) % (carouselImg.bruxist.length-1);
+            index = (index + 1) % (carouselImg.bruxist.length - 1);
             break;
         case "myoFor":
-            index = (index + 1) % (carouselImg.myopic.length-1);
+            index = (index + 1) % (carouselImg.myopic.length - 1);
             break;
         case "allBack":
-            index = (index - 1) % (carouselImg.allegories.length-1);
+            index = (index - 1) % (carouselImg.allegories.length - 1);
             break;
         case "bruxBack":
-            index = (index - 1) % (carouselImg.bruxist.length-1);
+            index = (index - 1) % (carouselImg.bruxist.length - 1);
             break;
         case "myoBack":
-            index = (index - 1) % (carouselImg.myopic.length-1);
+            index = (index - 1) % (carouselImg.myopic.length - 1);
             break;
     }
 
+    carouselDiscriminator();
+
     //make sure the carousels are being called
-    console.log("before carousel call");
-    carouselData("allegories", "allCarousel", "allCap");
-    carouselData("bruxist", "bruxCarousel", "bruxCap");
-    carouselData("myopic", "myoCarousel", "myoCap");
-    
+    // carouselData("allegories", "allCarousel", "allCap");
+    // carouselData("bruxist", "bruxCarousel", "bruxCap");
+    // carouselData("myopic", "myoCarousel", "myoCap");
+
+    // the issue with the above call is that since not all the carousels were present on one page, the first call would return null and prevent the others from being called. 
+
 });
 
 

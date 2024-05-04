@@ -7,3 +7,7 @@
     display: flex;
     flex-flow: column wrap;
 }
+
+.hidden{
+    display: none;
+}

@@ -17,24 +17,35 @@ const allegoriesImages = carouselImg;
 function getId(id) {
     return document.getElementById(id);
 }
+function isHidden(elementID) {
+    // console.log(document.getElementById(elementID).classList.contains("hidden"));
+    return document.getElementById(elementID).classList.contains("hidden");
+
+}
 
 console.log("Starting index", index);
 
 function carouselData(key, carousel, carCap) {
-    //state current index
-    console.log("Current index", index);
 
     //grab necessary ID's
     let curCarousel = getId(carousel);
     let curCap = getId(carCap);
 
-    // Use modulo to cycle through images
-    index = (index + 1) % carouselImg[key].length;
-    console.log("new index", index);
-
     //update images
     curCarousel.innerHTML = `<img src=${carouselImg[key][index]}>`;
     curCap.innerText = `${carouselDesc[key][index]}`;
+
+    // Use modulo to cycle through images
+    index = (index + (carouselImg[key].length-1)) % (carouselImg[key].length-1); 
+
+    if (index === 0){
+        if(isHidden(getId(`${key}Placeholder`)))
+        getId(`${key}Placeholder`).classList.remove('hidden');
+    }
+    else{
+        if(!isHidden(getId(`${key}Placeholder`)))
+        getId(`${key}Placeholder`).classList.add('hidden');
+    }
 };
 
 
@@ -45,20 +56,30 @@ addEventListener("click", function (event) {
 
     switch (event.target.id) {
         case "allFor":
+            index = (index + 1) % (carouselImg.allegories.length-1);
+            break;
         case "bruxFor":
+            index = (index + 1) % (carouselImg.bruxist.length-1);
+            break;
         case "myoFor":
-            index++;
+            index = (index + 1) % (carouselImg.myopic.length-1);
             break;
         case "allBack":
+            index = (index - 1) % (carouselImg.allegories.length-1);
+            break;
         case "bruxBack":
+            index = (index - 1) % (carouselImg.bruxist.length-1);
+            break;
         case "myoBack":
-            index--;
+            index = (index - 1) % (carouselImg.myopic.length-1);
             break;
     }
 
     //make sure the carousels are being called
     console.log("before carousel call");
     carouselData("allegories", "allCarousel", "allCap");
+    carouselData("bruxist", "bruxCarousel", "bruxCap");
+    carouselData("myopic", "myoCarousel", "myoCap");
     
 });
 

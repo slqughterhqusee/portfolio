@@ -1,3 +1,11 @@
+/* universal styling */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 .row{
     display: flex;
     flex-flow: row wrap;
@@ -6,8 +14,27 @@
 .column{
     display: flex;
     flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .hidden{
     display: none;
+}
+
+.wrapper{
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+/* nav */
+
+nav {
+    background-color: black;
+    color: white;
+    height: 100%;
+}
+
+.navwrap{
+    height: 100vh;
 }

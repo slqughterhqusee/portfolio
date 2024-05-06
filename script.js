@@ -41,7 +41,7 @@ function carouselData(key, carousel, carCap) {
 
     if (index === 0) {
         if (isHidden(getId(`${key}Placeholder`)))
-            getId(`${key}Placeholder`).classList.remove('hidden');
+            getId(`${key}Placeholder`).classList.remove('hidden');  
     }
     else if (!isHidden(getId(`${key}Placeholder`))) {
         getId(`${key}Placeholder`).classList.add('hidden');

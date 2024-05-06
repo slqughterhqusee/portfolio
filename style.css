@@ -33,8 +33,14 @@ nav {
     background-color: black;
     color: white;
     height: 100%;
+    width: 115px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
 }
 
-.navwrap{
-    height: 100vh;
+
+.main {
+    margin-left: 200px;
 }

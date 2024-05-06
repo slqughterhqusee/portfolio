@@ -11,43 +11,44 @@
 </head>
 
 <body>
-    <section class="wrapper row-space-around">
+    <section class="wrapper row">
 
         <nav class="column-space-around">
-            <section class="column">
-                <img src="/images/icons/about-icon.svg">
-                <a href="/about.html">ABOUT</a>
+            <section class="column" id="nav-about">
+                <img src="/images/icons/about-icon.svg" alt="About">
+                <p>ABOUT</p>
             </section>
 
-            <section class="column">
-                <img src="/images/icons/project-icon.svg">
-                <a href="/portfolio.html">PROJECT</a>
+            <section class="column" id="nav-proj">
+                <img src="/images/icons/project-icon.svg" alt="Projects">
+                <p>PROJECTS</p>
             </section>
 
-            <section class="column">
-                <img src="/images/icons/home-icon.svg">
-                <a href="/index.html">HOME</a>
+            <section class="column" id="nav-home">
+                <img src="/images/icons/home-icon.svg" alt="Home">
+                <p>HOME</p>
             </section>
 
-            <section class="column">
-                <img src="/images/icons/paperclip-icon.svg">
-                <a href="/resume.html">RESUME</a>
+            <section class="column" id="nav-resume">
+                <img src="/images/icons/paperclip-icon.svg" alt="Resume">
+                <p>RESUME</p>
             </section>
 
-            <section class="column">
-                <img src="/images/icons/contact-icon.svg">
-                <a href="/contact.html">CONTACT</a>
+            <section class="column" id="nav-contact">
+                    <img src="/images/icons/contact-icon.svg" alt="Contact">
+                    <p>CONTACT</p>
             </section>
         </nav>
 
         <section class="column main">
 
-            <section class="row-space-btwn">
+            <section class="row-end">
 
-                <section class="column-left left-main">
+                <section class="column-left left-main portfolio">
 
                     <section class="row-space-btwn port-head">
-                        <h1 class="wallpoet">Project <br> Portfolio </h1>
+                        <h1 class="type-intro">Project <br> Portfolio </h1>
+
                         <section class="column port-eyes">
                             <img class="eye" src="images/eyes/eyeFive.png" alt="A black and white halftoned eye.">
                             <img class="eye" src="images/eyes/eyeOne.png" alt="A black and white halftoned eye.">
@@ -58,9 +59,9 @@
 
                     <div></div>
 
-                    <h2>Programming</h2>
+                    <h2 class="underline">Programming</h2>
 
-                    <section class="card">
+                    <section class="card" id="link-juriexpi">
                         <h3>Jurassic Expeditions</h3>
                         <p class="subtitle">Brand Site</p>
                         <p>
@@ -68,7 +69,7 @@
                         </p>
                     </section>
 
-                    <section class="card">
+                    <section class="card" id="link-budgcalc">
                         <h3>Budget Calculator</h3>
                         <p class="subtitle">Company Collaboration</p>
                         <p>
@@ -76,7 +77,7 @@
                         </p>
                     </section>
 
-                    <section class="card">
+                    <section class="card" id="link-slowsaga">
                         <h3>The Slow Saga</h3>
                         <p class="subtitle">Game Design</p>
                         <p>
@@ -84,9 +85,9 @@
                         </p>
                     </section>
 
-                    <h2>Storybuilding</h2>
+                    <h2 class="underline">Storybuilding</h2>
 
-                    <section class="card">
+                    <section class="card" id="link-bruxist">
                         <h3>Bruxist</h3>
                         <p class="subtitle">Character Development & Plot</p>
                         <p>
@@ -95,7 +96,7 @@
                         </p>
                     </section>
 
-                    <section class="card">
+                    <section class="card" id="link-allegories">
                         <h3>Allegories</h3>
                         <p class="subtitle">Culture and Society Development</p>
                         <p>
@@ -104,7 +105,7 @@
                         </p>
                     </section>
 
-                    <section class="card">
+                    <section class="card" id="link-myopic">
                         <h3>Myopic</h3>
                         <p class="subtitle">Culture and Society Development</p>
                         <p>
@@ -113,9 +114,9 @@
                         </p>
                     </section>
 
-                    <h2>Writing</h2>
+                    <h2 class="underline">Writing</h2>
 
-                    <section class="card">
+                    <section class="card" id="link-rpo">
                         <h3>Ready Player One: Analysis</h3>
                         <p class="subtitle">MLA Essay</p>
                         <p>
@@ -124,7 +125,7 @@
                         </p>
                     </section>
 
-                    <section class="card">
+                    <section class="card" id="link-as">
                         <h3>Allegories Short</h3>
                         <p class="subtitle">Narrative Short</p>
                         <p>
@@ -141,36 +142,20 @@
                     <section class="port-index">
                         <h5>Programming</h5>
                         <ul>
-                            <li>
-                                Jurassic Expeditions
-                            </li>
-                            <li>
-                                Budgeting Calculator
-                            </li>
-                            <li>
-                                The Slow Saga
-                            </li>
+                            <li><a href="/landing-pages/jurassic-expeditions.html">Jurassic Expeditions</a></li>
+                            <li><a href="/landing-pages/budget-calculator.html">Budgeting Calculator</a></li>
+                            <li><a href="/landing-pages/slow-saga.html">The Slow Saga</a></li>
                         </ul>
                         <h5>Storybuilding</h5>
                         <ul>
-                            <li>
-                                Bruxist
-                            </li>
-                            <li>
-                                Allegories
-                            </li>
-                            <li>
-                                Myopic
-                            </li>
+                            <li><a href="/landing-pages/bruxist.html">Bruxist</a></li>
+                            <li><a href="/landing-pages/allegories.html">Allegories</a></li>
+                            <li><a href="/landing-pages/myopic.html">Myopic</a></li>
                         </ul>
                         <h5>Writing</h5>
                         <ul>
-                            <li>
-                                Ready Player One Analysis
-                            </li>
-                            <li>
-                                Allegories Short
-                            </li>
+                            <li><a href="/landing-pages/ready-player-one.html">Ready Player One Analysis</a></li>
+                            <li><a href="/landing-pages/allegories-short.html">Allegories Short</a></li>
                         </ul>
                     </section>
 

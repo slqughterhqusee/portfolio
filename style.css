@@ -7,99 +7,169 @@
     margin: 0;
     padding: 0;
     font-family: "Inder", sans-serif;
-    
+
 }
 
-body{
+body {
     background-color: black;
     color: white;
 }
 
-.row{
+.row {
     display: flex;
     flex-flow: row wrap;
 }
 
-.column{
+.column {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
 }
 
-.column-left{
+.column-left {
     display: flex;
     flex-flow: column wrap;
     align-items: flex-start;
     justify-content: center;
 }
 
-.column-space-around{
+.column-space-around {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
     justify-content: space-around;
 }
 
-.row-space-around{
+.row-space-around {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-around;
 }
 
-.row-space-btwn{
+.row-space-btwn {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-between;
 }
 
-.hidden{
+.row-end {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.hidden {
     display: none;
 }
 
-.wrapper{
+.wrapper {
     height: 100vh;
     overflow-y: scroll;
 }
 
-.center{
+.center {
     text-align: center;
 }
 
-.left{
+.left {
     text-align: left;
 }
 
-.right{
+.right {
     text-align: right;
 }
 
-.wallpoet{
+.wallpoet {
     font-family: "Wallpoet", sans-serif;
 }
 
-.kosugi{
+.kosugi {
     font-family: "Kosugi Maru", sans-serif;
 }
 
-.eye{
+.eye {
     width: 4em;
     margin: .3em;
 }
 
-h1{
+h1 {
     font-size: 6em;
 }
 
-a{
+h2 {
+    font-size: 3em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+h5 {
+    font-size: 1.3em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Wallpoet", sans-serif;
+}
+
+a {
     color: white;
 }
 
-a::after{
+a::after {
     color: white;
 }
+
+.underline {
+    text-decoration: underline;
+}
+
+/* typing effect animation */
+
+.type-intro {
+    overflow: hidden;
+    color: white;
+    border-right: .15em solid rgb(255, 255, 255);
+    white-space: nowrap;
+    letter-spacing: .15em;
+    animation:
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+    width: fit-content;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 70%
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: white;
+    }
+}
+
+/* ty sharon for the typing code ^^ !!!! love u girl */
 
 /* nav */
 
@@ -122,6 +192,14 @@ nav {
     left: 0;
 }
 
+nav section {
+    cursor: pointer;
+}
+
+nav a:hover {
+    color: #655500;
+}
+
 
 .main {
     margin-left: 200px;
@@ -129,33 +207,101 @@ nav {
 
 /* portfolio styling */
 
-.left-main{
-    width: 60%;
+.left-main {
+    width: 75%;
+    margin-top: 1em;
 }
 
-.right-main{
+.right-main {
     width: 20%;
     background-color: white;
     padding: 1.5em;
-    height: 100vh;
+    height: 100%;
     color: black;
+
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
 }
 
-.port-head{
-    width: 70%;
+.right-main p {
+    width: 60%;
+    align-self: flex-start;
+    margin-left: 1.5em;
+    font-size: 1.2em;
+}
+
+.port-head {
+    width: 90%;
     margin-bottom: 2em;
 }
 
-.port-eyes{
+.port-eyes {
     width: 25%;
 }
 
+.port-index {
+    width: 90%;
+    height: 20%;
+    background-color: rgba(233, 220, 194, 0.28);
+    color: #5C4651;
+    font-family: "Kosugi Maru", sans-serif;
+    overflow-y: scroll;
+    padding: .5em;
+    margin: 1em;
+}
+
+.port-index a,
+.port-index a::after {
+    color: #5C4651;
+    text-decoration-style: dotted;
+    text-underline-offset: 2px;
+}
+
+.port-index h5 {
+    text-decoration: underline;
+    font-family: "Kosugi Maru", sans-serif;
+}
+
+.port-index ul {
+    list-style-type: none;
+    line-height: 25px;
+}
+
+.port-index li {
+    margin-left: 1em;
+}
+
+.card {
+    width: 75%;
+    background-color: #181818;
+    border-radius: 10px;
+    padding: 1.5em;
+    margin: .5em;
+    border: 2px solid #655500;
+    line-height: 27px;
+    cursor: pointer;
+}
+
+.card:hover {
+    background-color: #655500;
+}
+
+.subtitle {
+    color: #B7B7B7;
+    margin: .3em 0 .5em 0;
+}
+
+.portfolio h2 {
+    margin: .5em 0 .5em 0;
+}
 
 
 /* footer */
 footer {
-    margin-left:200px;
-    padding:  .5em 0 .5em 0;
+    margin-left: 200px;
+    padding: .5em 0 .5em 0;
     font-family: "Kosugi Maru", sans-serif;
     width: 100%;
 }

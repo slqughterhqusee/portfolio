@@ -171,7 +171,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     window.location.href = '/about.html';
                     console.log('Navigating to Jurassic Expeditions page');
                     break;
-                case "nav-projects":
+                case "nav-proj":
                     window.location.href = '/portfolio.html';
                     console.log('Navigating to Ready Player One page');
                     break;

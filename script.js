@@ -34,7 +34,7 @@ function carouselData(key, carousel, carCap) {
 
     //update images
     curCarousel.innerHTML = `<img src=${carouselImg[key][index]}>`;
-    curCap.innerHTML = `<p> ${carouselDesc[key][index]} </p>`;
+    curCap.innerHTML = `<p> <small> ${carouselDesc[key][index]} </small> </p>`;
 
     // Use modulo to cycle through images
     index = (index + (carouselImg[key].length - 1)) % (carouselImg[key].length - 1);

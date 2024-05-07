@@ -62,12 +62,18 @@ body {
     justify-content: flex-end;
 }
 
+.row-center{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
 .hidden {
     display: none;
 }
 
-.wrapper {
-    height: 100vh;
+.port-wrapper {
+    height: 100vh; 
     overflow-y: scroll;
 }
 
@@ -133,6 +139,14 @@ a::after {
     text-decoration: underline;
 }
 
+.eighty-sizer{
+    width: 80vw;
+}
+
+/* .seventyWidth{
+    width: 70%;
+} */
+
 /* typing effect animation */
 
 .type-intro {
@@ -184,6 +198,7 @@ nav {
     height: 100%;
     width: 115px;
     padding-right: .5em;
+    padding-left: .3em;
 
     /* positioning */
     position: fixed;
@@ -241,38 +256,6 @@ nav a:hover {
     width: 25%;
 }
 
-.port-index {
-    width: 90%;
-    height: 20%;
-    background-color: rgba(233, 220, 194, 0.28);
-    color: #5C4651;
-    font-family: "Kosugi Maru", sans-serif;
-    overflow-y: scroll;
-    padding: .5em;
-    margin: 1em;
-}
-
-.port-index a,
-.port-index a::after {
-    color: #5C4651;
-    text-decoration-style: dotted;
-    text-underline-offset: 2px;
-}
-
-.port-index h5 {
-    text-decoration: underline;
-    font-family: "Kosugi Maru", sans-serif;
-}
-
-.port-index ul {
-    list-style-type: none;
-    line-height: 25px;
-}
-
-.port-index li {
-    margin-left: 1em;
-}
-
 .card {
     width: 75%;
     background-color: #181818;
@@ -288,6 +271,10 @@ nav a:hover {
     background-color: #655500;
 }
 
+.final-card{
+    margin-bottom: 2em;
+}
+
 .subtitle {
     color: #B7B7B7;
     margin: .3em 0 .5em 0;
@@ -297,11 +284,105 @@ nav a:hover {
     margin: .5em 0 .5em 0;
 }
 
+/* story landing styling*/
+
+.carousel img{
+    width: 50%;
+}
+
+.caption{
+    width:50%;
+}
+
+.carousel-but button{
+    background-color: white;
+    width: 5rem;
+    height: 2rem;
+    color: black;
+    font-size: 1.5em;
+    font-family: "Wallpoet", sans-serif;
+    margin: 0 .05em 0 .05em;
+}
+
+.char-card img{
+    width: 25%;
+}
+
+.char-triple img{
+    width: 25%;
+}
+
+.char-wide img{
+    width: 25%;
+}
+
+.land-head{
+    margin-top: 2em;
+}
+
+.land-head p{
+    line-height: 23px;
+}
+
+.head-div{
+    width: 700px;
+    height: 1.5px;
+    background-color: white;
+    margin: 2em 0 2em 0;
+}
 
 /* footer */
-footer {
-    margin-left: 200px;
-    padding: .5em 0 .5em 0;
+.footer {
+    padding: .5em 0 2em 0;
     font-family: "Kosugi Maru", sans-serif;
-    width: 100%;
+    align-self: center;
+}
+
+.port-foot{
+    position: fixed;
+    bottom:0;
+}
+
+.black{
+    color: black;
+}
+
+/* index styling */
+
+.index {
+    width: 90%;
+    height: 20%;
+    background-color: rgb(243, 240, 235);
+    border: 2px solid white;
+    color: #5C4651;
+    font-family: "Kosugi Maru", sans-serif;
+    overflow-y: scroll;
+    padding: .5em;
+    margin: 1em;
+}
+
+.index a,
+.index a::after {
+    color: #5C4651;
+    text-decoration-style: dotted;
+    text-underline-offset: 2px;
+}
+
+.index h5 {
+    text-decoration: underline;
+    font-family: "Kosugi Maru", sans-serif;
+}
+
+.index ul {
+    list-style-type: none;
+    line-height: 25px;
+}
+
+.index li {
+    margin-left: 1em;
+}
+
+.ind-op{
+    border: 2px solid #5C4651;
+    background-color: rgba(233, 220, 194, 0.28);
 }

@@ -7,11 +7,10 @@
     <title>Bruxist.</title>
     <link rel="icon" href="/images/eyes/eyeThree.png">
     <link rel="stylesheet" href="/style.css">
-    <script src="/script.js"></script>
 </head>
 
 <body>
-    <section class="wrapper navwrap row">
+    <section class="wrapper column">
 
         <nav class="column-space-around">
             <section class="column" id="nav-about">
@@ -35,43 +34,60 @@
             </section>
 
             <section class="column" id="nav-contact">
-                    <img src="/images/icons/contact-icon.svg" alt="Contact">
-                    <p>CONTACT</p>
+                <img src="/images/icons/contact-icon.svg" alt="Contact">
+                <p>CONTACT</p>
             </section>
         </nav>
 
-        <section class="column">
+        <section class="main eighty-sizer">
             <!-- header area -->
-            <section class="right column">
+            <section class="land-head">
                 <h1>Bruxist</h1>
+                <br>
                 <p class="kosugi">Character Dev & Plot Design</p>
                 <p class="kosugi">Early April 2023 - Current</p>
             </section>
 
-            <div></div>
+            <div class="landing-div"></div>
 
-            <section class="carousel" id="bruxCarousel">
-                <img id="bruxistPlaceholder" src="/images/bruxist/bruxist-lineup.png">
-            </section>
+            <section class="column">
 
-            <section class="carousel-sub row">
-                <section class="bruxCap"></section>
-                <section class="carousel-but row">
-                    <button id="bruxBack"> &lt; </button>
-                    <button id="bruxFor"> &gt; </button>
+                <section class="carousel column" id="bruxCarousel">
+                    <img id="bruxistPlaceholder" src="/images/bruxist/bruxist-lineup.png">
                 </section>
+
+                <br>
+
+                <section class="carousel-sub row-center">
+                    <section id="bruxCap" class="caption">
+                        <p>
+                            <small>
+                                A collection of headshots of the current cast of Bruxist. These are meant to be
+                                nonstylised to show realistic features of the characters, since in most pieces they're
+                                all very stylized (hence Pinball not being blacked out and X not having their mask). X
+                                (top row, far right) has been edited since this piece.
+                            </small>
+                        </p>
+                    </section>
+
+                    <section class="carousel-but row">
+                        <button id="bruxBack"> <img src="/images/icons/left-caret-svg.svg"> </button>
+                        <button id="bruxFor"> <img src="/images/icons/right-caret.svg"> </button>
+                    </section>
+                </section>
+
             </section>
 
             <!-- intro and index -->
 
-            <section class="row">
+            <section class="row-space-btwn">
 
-                <section class="column" id="intro">
+                <section class="intro" id="intro">
                     <h2>
                         Intro
                     </h2>
 
-                    <div></div>
+                    <div class="landing-div"></div>
 
                     <p>
                         Bruxist began in my sophomore year history class. What had been just a single doodle soon
@@ -82,33 +98,35 @@
                     </p>
                 </section>
 
-                <section class="column">
+                <section class="column intro-index">
                     <!-- add text-dec underline -->
                     <h3>
-                        Index
+                        INDEX
                     </h3>
 
-                    <section class="column index">
-                        <a href="#bruxIntro">Intro</a>
-                        <a href="#bruxOutline">Story Outline</a>
-                        <a href="#bruxArt">Art & Design</a>
+                    <section class="index">
                         <ul>
-                            <li> <a href="#bruxChr">Character Design</a> </li>
-                            <li> <a href="#bruxGraphics">Colorways & Aesthetics</a> </li>
-                            <li> <a href="#bruxVersions">Versions</a> </li>
-                            <li> <a href="#bruxTakeaways">Takeaways</a> </li>
+                            <a href="#bruxIntro">Intro</a>
+                            <a href="#bruxOutline">Story Outline</a>
+                            <a href="#bruxArt">Art & Design</a>
+                            <ul>
+                                <li> <a href="#bruxChr">Character Design</a> </li>
+                                <li> <a href="#bruxGraphics">Colorways & Aesthetics</a> </li>
+                                <li> <a href="#bruxVersions">Versions</a> </li>
+                                <li> <a href="#bruxTakeaways">Takeaways</a> </li>
+                            </ul>
+                            <a href="#bruxBTS">Extra + BTS</a>
                         </ul>
-                        <a href="#bts">Extra + BTS</a>
                     </section>
 
                 </section>
 
             </section>
 
-
+            <br>
 
             <h2 id="bruxOutline">Story Outline</h2>
-            <div></div>
+            <div class="landing-div"></div>
 
             <p>
                 Bruxist follows a young man called Lenen as he seeks revenge amid the apocalypse. After Lenen's brother,
@@ -119,9 +137,10 @@
                 propel him on his mission to either end the apocalypse or bring living hell to Omen's front door.
             </p>
 
+            <br>
 
             <h2 id="bruxArt">Art & Design</h2>
-            <div></div>
+            <div class="landing-div"></div>
 
             <p>
                 Bruxist takes place in a dim-lit, purple-toned city. However, the overall world holds many aesthetics.
@@ -130,15 +149,17 @@
                 generally typical until further examined.
             </p>
 
+            <br>
 
             <h3 id="bruxChr">Character Design</h3>
 
-            <section class="row">
+            <section class="row-btwn-top">
 
-                <section class="column">
+                <section class="char-card">
                     <img src="" alt="">
                     <!-- single out omen from the lineup -->
                     <h4>Omen</h4>
+                    <br>
                     <p>
                         Omen was the first character I designed for Bruxist, and his design has changed the least from
                         the original creation. The goal was to create a design that very clearly showed some sort of
@@ -149,9 +170,10 @@
                     </p>
                 </section>
 
-                <section class="column">
+                <section class="char-card">
                     <img src="/images/bruxist/meridian-two.png" alt="">
                     <h4>Meridian</h4>
+                    <br>
                     <p>
                         Meridian's design is inspired by flappers, '80s jazz bars, and everything flamboyantly vintage.
                         Their showmanship is directed by their occupation, which happens to be working at a showman-type
@@ -163,9 +185,10 @@
                     </p>
                 </section>
 
-                <section class="column">
+                <section class="char-card">
                     <img src="/images/bruxist/pb-full.png" alt="">
                     <h4>Pinball</h4>
+                    <br>
                     <p>
                         Compared to other Bruxist characters, Pinball's design is painfully stereotypical. The purpose
                         of this is that his body itself is twisted and distorted, meaning to create a meaningful image
@@ -178,13 +201,19 @@
 
             </section>
 
+            <br>
+
             <h3 id="bruxGraphics">Colorways and Aesthetic</h3>
+
+            <br><br>
 
             <section class="row">
                 <img src="" alt="">
                 <!-- palette -->
-                <img src="/images/bruxist/muya-full.png" alt="">
+                <img class="short" src="/images/bruxist/muya-full.png" alt="">
             </section>
+
+            <br>
 
             <p>
                 Bruxist's palette mainly consists of purples, greens, and neutrals. The use of these colours was
@@ -197,21 +226,33 @@
                 world around them.
             </p>
 
+            <br>
+
             <h3 id="bruxVersions">Versions</h3>
+
+            <br><br>
 
             <h4>X 1.0 + 1.5</h4>
 
+            <br>
+
             <figure>
-                <section class="row">
+                <section class="row-space-btwn char-triple">
                     <img src="/images/bruxist/x-orig.png" alt="">
                     <img src="/images/bruxist/x-current.jpeg" alt="">
                 </section>
+
+                <br>
+
                 <figcaption>
                     <em>
-                        X underwent minor changes in appearance. Their original version is seen on the left, and their redesigned version is seen on the right.
+                        X underwent minor changes in appearance. Their original version is seen on the left, and their
+                        redesigned version is seen on the right.
                     </em>
                 </figcaption>
             </figure>
+
+            <br>
 
             <p>
                 X's original design was meant to represent a kind of stylised straightjacket. They were meant to look
@@ -229,6 +270,7 @@
                 the choice that X will likely wear lots of winter clothes and fur coats.
             </p>
 
+            <br><br>
 
             <h3 id="bruxTakeaways">Things I've Learnt</h3>
 
@@ -240,12 +282,12 @@
                 improvements to my understanding of lighting.
             </p>
 
-
+            <br><br>
 
             <h2 id="bruxBTS">Extra + BTS</h2>
-            <div></div>
+            <div class="landing-div"></div>
 
-            <ul>
+            <ul class="extra">
                 <li>
                     Bruxist actually derives from the word <em>bruxism</em>, which is the condition of excessive teeth
                     grinding. Bruxist itself isn't an actual word, but I added on a common suffix to make it sound like
@@ -253,20 +295,24 @@
                 </li>
             </ul>
 
+            <section class="row-space-btwn landing-foot">
+                <section>
+                    <p class="kosugi">Icarus Wedekind &copy; 2024</p>
+                </section>
 
-            <section class="row">
-                <a href="" class="wallpoet">BACK</a>
-                <a href="" class="wallpoet">NEXT</a>
+                <section class="landing-btn">
+                    <a href="slow-saga.html" class="wallpoet">BACK</a>
+                    <a href="allegories.html" class="wallpoet">NEXT</a>
+                </section>
             </section>
 
         </section>
 
     </section>
 
-    <footer>
-        <p class="kosugi">Icarus Wedekind &copy; 2024</p>
-    </footer>
+    <!-- script -->
 
+    <script src="/script.js"></script>
 </body>
 
 </html>

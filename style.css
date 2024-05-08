@@ -403,6 +403,13 @@ nav section:hover {
     padding: .7rem 2rem .7rem 2rem;
     font-family: "Wallpoet", sans-serif;
     font-size: 1.4em;
+    transition: color 1s, border 1s, "background-color" 1s;
+}
+
+.landing-btn a:hover{
+    background-color: #181818;
+    color: rgb(243, 240, 235);
+    border: 1px solid white;
 }
 
 .long{

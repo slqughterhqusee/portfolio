@@ -1,7 +1,7 @@
 var carouselImg = {
     allegories: ["/images/allegories/allegories-designs.png", "/images/allegories/allegories-lineup.png", "/images/allegories/shiem-full.png", "/images/allegories/tea-full.png", "/images/allegories/jhim-trad.png","/images/allegories/nox-full.png", "/images/allegories/jhim-full.png", "/images/allegories/costa-full.png"],
     bruxist: ["/images/bruxist/bruxist-lineup.png", "/images/bruxist/lenen-full.png", "/images/bruxist/x-full.png", "/images/bruxist/muya-full.png", "/images/bruxist/yamar-full.png"],
-    myopic: ["/images/myopic/myopic-lineup.png", "/images/myopic/chibi-lineup.png", "/images/myopic/caba-hair.gif", "/images/myopic/bhuqi-costume.png", "images/myopic/bhuqi-makeup.png"]
+    myopic: ["/images/myopic/myopic-lineup.png", "/images/myopic/chibi-lineup.png", "/images/myopic/caba-hair.gif", "/images/myopic/bhuqi-costume.png", "/images/myopic/bhuqi-makeup.png"]
 }
 
 var carouselDesc = {
@@ -9,7 +9,7 @@ var carouselDesc = {
 
     bruxist: ["A collection of headshots of the current cast of Bruxist. These are meant to be nonstylised to show realistic features of the characters, since in most pieces they're all very stylized (hence Pinball not being blacked out and X not having their mask). X (top row, far right) has been edited since this piece.", "The protagonist of Bruxist, Lenen. This piece was originally a frame from an animation I was working on, but have since scrapped.", "X holding Lenen in their palm. Funnily enough, I made this piece before watching Blade Runner 2049, which has a scene similar to this concept. Lenen and X have a kind of tense romance, which I tried to portray through the intense power dissonance between them&mdash;mortal and god.", "This piece is part of a collection, but is by far my proudest out of the remaining three. I had originally wanted to have a piece that felt intimately intimidating, like the one between X and Lenen. Eventually, I ended up working this into an actual scene.", "One of the first sketches for Bruxist I ever did. Most of the first drawings for this story were done in a small handheld green notebook in my English class."],
     
-    myopic: ["A collection of the initial sketches of the main trio.", "Some cuter chibis of the main trio.", "A collection of possible hair choices for Caba. Since she's an android, her hair is easily replacable, and I had a lot of fun playing around with the concept of how she'd utilize that to her advantage as a thief.", "Some costume designs for culturally important theater.", "Some makeup designs inspired by the theatre, seen in popular fashion."],
+    myopic: ["A collection of the initial sketches of the main trio. I was aiming to have their clothes reflect cyberpunk elements, but also look familiar, which I obtained by through a combination of common cotton texturing and glossy material.", "Some cuter chibis of the main trio.", "A collection of possible hair choices for Caba. Since she's an android, her hair is easily replacable, and I had a lot of fun playing around with the concept of how she'd utilize that to her advantage as a thief.", "Some costume designs for culturally important theater.", "Some makeup designs inspired by the theatre, seen in popular fashion."],
 }
 
 
@@ -67,35 +67,38 @@ function carouselDiscriminator() {
             break;
     }
 };
+let theClickyThing = document.getElementsByClassName('carousel-but');
+for(thing of theClickyThing){
 
+    thing.addEventListener("click", function (event) {
+        event.preventDefault();
+        //make sure it's grabbing the right ID
+        console.log(event.target.id)
+    
+        switch (event.target.id) {
+            case "allFor":
+                index = (index + 1) % (carouselImg.allegories.length);
+                break;
+            case "bruxFor":
+                index = (index + 1) % (carouselImg.bruxist.length);
+                break;
+            case "myoFor":
+                index = (index + 1) % (carouselImg.myopic.length);
+                break;
+            case "allBack":
+                index = (index - 1) % (carouselImg.allegories.length);
+                break;
+            case "bruxBack":
+                index = (index - 1) % (carouselImg.bruxist.length);
+                break;
+            case "myoBack":
+                index = (index - 1) % (carouselImg.myopic.length);
+                break;
+        }
+        carouselDiscriminator();
+    });
+}
 
-addEventListener("click", function (event) {
-    event.preventDefault();
-    //make sure it's grabbing the right ID
-    console.log(event.target.id)
-
-    switch (event.target.id) {
-        case "allFor":
-            index = (index + 1) % (carouselImg.allegories.length);
-            break;
-        case "bruxFor":
-            index = (index + 1) % (carouselImg.bruxist.length);
-            break;
-        case "myoFor":
-            index = (index + 1) % (carouselImg.myopic.length);
-            break;
-        case "allBack":
-            index = (index - 1) % (carouselImg.allegories.length);
-            break;
-        case "bruxBack":
-            index = (index - 1) % (carouselImg.bruxist.length);
-            break;
-        case "myoBack":
-            index = (index - 1) % (carouselImg.myopic.length);
-            break;
-    }
-
-    carouselDiscriminator();
 
     //make sure the carousels are being called
     // carouselData("allegories", "allCarousel", "allCap");
@@ -104,7 +107,6 @@ addEventListener("click", function (event) {
 
     // the issue with the above call is that since not all the carousels were present on one page, the first call would return null and prevent the others from being called. 
 
-});
 
 document.addEventListener("DOMContentLoaded", function () {
 

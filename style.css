@@ -56,7 +56,7 @@ body {
     justify-content: space-between;
 }
 
-.row-btwn-top{
+.row-btwn-top {
     display: flex;
     flex-flow: row wrap;
     align-items: flex-start;
@@ -126,7 +126,7 @@ h3 {
     font-size: 2em;
 }
 
-h4{
+h4 {
     font-size: 1.5em;
 }
 
@@ -205,8 +205,8 @@ a::after {
 
 nav {
     box-sizing: content-box;
-    background-color: rgb(0, 0, 0);
-    color: rgb(240, 239, 231);
+    background-color: rgb(35, 0, 0);
+    color: rgb(219, 218, 210);
     border-right: 1px solid white;
 
     font-size: 1.5em;
@@ -230,6 +230,10 @@ nav section {
     cursor: pointer;
 }
 
+nav section p {
+    margin-top: .3em;
+}
+
 nav:hover {
     background-color: rgb(194, 184, 167);
 
@@ -238,6 +242,7 @@ nav:hover {
 nav section:hover {
     color: #794a03;
 }
+
 
 
 .main {
@@ -314,8 +319,11 @@ nav section:hover {
     width: 50%;
 }
 
+/* edit talls to 1050px height photopea */
+
 .caption {
     width: 50%;
+    margin-right: 1em;
 }
 
 .carousel-but button {
@@ -337,14 +345,14 @@ nav section:hover {
     width: 20%;
 }
 
-.char-card{
+.char-card {
     width: 30%;
     margin-top: 2em;
     transition: border 1s linear;
     padding: .5em;
 }
 
-.char-card:hover{
+.char-card:hover {
     border: 1px solid white;
 }
 
@@ -354,11 +362,11 @@ nav section:hover {
 }
 
 .char-triple img {
-    width: 25%;
+    width: 30%;
 }
 
 .char-wide img {
-    width: 25%;
+    width: 60%;
 }
 
 .land-head {
@@ -380,6 +388,34 @@ nav section:hover {
     width: 50%;
 }
 
+.extra {
+    width: 50%;
+    line-height: 30px;
+    margin-left: 2em;
+
+}
+
+.landing-btn a, .landing-btn a::after{
+    text-decoration: none;
+    background-color: rgb(243, 240, 235);
+    margin: 0 .1em 0 .1em;
+    color: black;
+    padding: .7rem 2rem .7rem 2rem;
+    font-family: "Wallpoet", sans-serif;
+    font-size: 1.4em;
+}
+
+.long{
+    width: 70%;
+}
+
+.short{
+    width: 15%;
+    /* make 800x800px */
+}
+
+
+
 /* footer */
 .footer {
     padding: .5em 0 2em 0;
@@ -392,17 +428,24 @@ nav section:hover {
     bottom: 0;
 }
 
+.landing-foot {
+    margin-top: 3em;
+    margin-bottom: 1.5em;
+}
+
 .black {
     color: black;
 }
+
+
 
 /* index styling */
 
 .index {
     width: 90%;
     height: 20%;
-    background-color: rgb(243, 240, 235);
-    border: 2px solid white;
+    background-color: rgb(255, 244, 223);
+    border: 3px solid #e7c100;
     color: #5C4651;
     font-family: "Kosugi Maru", sans-serif;
     overflow-y: scroll;
@@ -452,4 +495,8 @@ nav section:hover {
 
 .intro-index {
     margin-right: 10em;
+}
+
+.intro-index h3 {
+    text-decoration: underline;
 }

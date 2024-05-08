@@ -67,6 +67,7 @@ function carouselDiscriminator() {
             break;
     }
 };
+
 let theClickyThing = document.getElementsByClassName('carousel-but');
 for(thing of theClickyThing){
 

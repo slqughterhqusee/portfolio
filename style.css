@@ -317,9 +317,9 @@ nav section:hover {
 
 .carousel img {
     width: 50%;
+    /* edit talls to 1050px height photopea */
 }
 
-/* edit talls to 1050px height photopea */
 
 .caption {
     width: 50%;
@@ -421,7 +421,13 @@ nav section:hover {
     /* make 800x800px */
 }
 
+.fiftywidth {
+    width: 50%;
+}
 
+.fifwimg img{
+    width: 50%;
+}
 
 /* footer */
 .footer {

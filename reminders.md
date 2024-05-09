@@ -3,3 +3,4 @@
 4. try to figure out how to hide back buttons while on index 0 to prevent erroring
 ADD COLORPALLETE!!! TO LANIDNGIGS
 
+5. FIND A WAY TO GET THE HOME ANIMATION TO NOT START ON THE OPEN

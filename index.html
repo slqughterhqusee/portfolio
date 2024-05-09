@@ -11,60 +11,67 @@
 </head>
 
 <body>
-    <section class="wrapper">
+    <section id="home-wrapper" class="port-wrapper row-tot-center">
         <!-- the wrapper keeps everything centered in the middle of the page -->
-        <div class="divhorz row">
-            <!-- creates a row with the two tops of the brackets -->
-            <div></div>
-            <div></div>
+        <div class="column-left brackets">
+            <div class="top-div"></div>
+            <div class="long-div"></div>
+            <div class="top-div"></div>
         </div>
 
-        <section class="row">
+        <section id="home-content" class="row-center center-sizer inner-open">
             <!-- This row groups the multiple columns together -->
-            <section class="column">
+            <section class="column left">
 
-                <section class="column">
+                <section class="top-sec column">
                     <!-- this holds the top half of the left side -->
-                    <section class="row">
-                        <img src="images/eyes/eyeOne.png" alt="A black and white halftoned eye.">
-                        <img src="images/eyes/eyeTwo.png" alt="A black and white halftoned eye.">
-                        <img src="images/eyes/eyeThree.png" alt="A black and white halftoned eye.">
-                        <img src="images/eyes/eyeFour.png" alt="A black and white halftoned eye.">
+                    <section class="row-center home-eyes top-eyes">
+                        <img id="eyeOne" src="images/eyes/eyeOne.png" alt="A black and white halftoned eye.">
+                        <img id="eyeTwo" src="images/eyes/eyeTwo.png" alt="A black and white halftoned eye.">
+                        <img id="eyeThree" src="images/eyes/eyeThree.png" alt="A black and white halftoned eye.">
+                        <img id="eyeFour" src="images/eyes/eyeFour.png" alt="A black and white halftoned eye.">
                     </section>
 
-                    <section class="">
-                        <h2>Projects</h2>
+                    <section class="red abt-sec projects" id="nav-proj">
+                        <h3>Projects</h3>
                     </section>
                 </section>
 
                 <section class="row">
 
-                    <section class="column">
+                    <section class="column-space-btwn home-eyes fiftywidth">
                         <!-- this holds the left side of the bottom left side -->
-                        <section class="">
-                            <h3>Contact</h3>
+                        <section class="gold abt-sec contact" id="nav-contact">
+                            <h5>Contact</h5>
                         </section>
 
-                        <img src="images/eyes/eyeFive.png" alt="A black and white halftoned eye.">
+                        <img id="eyeFive" src="images/eyes/eyeFive.png" alt="A black and white halftoned eye.">
 
-                        <section class="">
-                            <h3>Resume</h3>
+                        <section class="red abt-sec resume" id="nav-resume">
+                            <h4>Resume</h4>
                         </section>
                     </section>
 
-                    <section class="column">
+                    <section class="column fiftywidth logo">
                         <!-- this holds the right side of the bottom left side -->
                         <img src="images/logo/logoWhite.png">
 
                         <!-- This holds the about information -->
-                        <section>
+                        <section class="gold abt-sec about" id="nav-about">
 
-                            <h3>About</h3>
-                            
-                            <p>I'm currently in my final year of high school. When I'm not studying (which I'm usually
-                                not), I take interest in the topics of anthropology, linguistics, psychology, and
-                                history. More casually? I'm a Final Fantasy geek and artist. Contrary to my usual taste
-                                in media, the worlds I create are usually diode-lit cyberpunk cities.</p>
+                            <h4>About</h4>
+
+                            <p>
+                                <small>
+                                    I'm currently in my final year of high school. When I'm not studying (which I'm
+                                    usually
+                                    not), I take interest in the topics of anthropology, linguistics, psychology, and
+                                    history. More casually? I'm a Final Fantasy geek and artist. Contrary to my usual
+                                    taste
+                                    in media, the worlds I create are usually diode-lit cyberpunk cities.
+                                </small>
+                            </p>
+
 
                         </section>
 
@@ -74,40 +81,45 @@
 
             </section>
 
-            <section class="column">
+            <section class="column home-eyes right">
                 <!-- This section holds the right side of the inner content -->
 
-                <img src="images/portrait/home.png"
+                <img style="width:80%" src="images/portrait/home.png"
                     alt="A black and white photo of an Icarus. He is androgynous-looking with long hair and no bangs, looking at the camera as he tilts down his sunglasses.">
 
-                <section class="row">
-                    <img src="images/eyes/eyeSix.png" alt="A black and white halftoned eye.">
-                    <a href="https://www.instagram.com/slqughterhqusee/">
-                        Insta
+                <section class="row-tot-btwn home-links home-eyes h-l-top">
+                    <img id="eyeSix" src="images/eyes/eyeSix.png" alt="A black and white halftoned eye.">
+                    <a class="wallpoet" href="https://www.instagram.com/slqughterhqusee/">
+                        INSTA
                     </a>
                 </section>
 
-                <section class="row">
-                    <a href="https://github.com/slqughterhqusee">
-                        Git
+                <section class="row-tot-center home-links">
+                    <a class="wallpoet" href="https://github.com/slqughterhqusee">
+                        GIT
                     </a>
                 </section>
 
-                <section class="row">
-                    <a href="https://www.linkedin.com/in/icarus-wedekind/">
+                <section class="row-tot-btwn home-eyes home-links">
+                    <a class="wallpoet" href="https://www.linkedin.com/in/icarus-wedekind/">
                         LK.D
                     </a>
-                    <img src="images/eyes/eyeSeven.png" alt="A black and white halftoned eye.">
+                    <img id="eyeSeven" src="images/eyes/eyeSeven.png" alt="A black and white halftoned eye.">
                 </section>
 
             </section>
 
         </section>
+
+        <div class="column-right brackets">
+            <div class="top-div"></div>
+            <div class="long-div"></div>
+            <div class="top-div"></div>
+        </div>
+
     </section>
 
-    <footer>
-        <p>Icarus Wedekind &copy; 2024</p>
-    </footer>
+
 
 </body>
 

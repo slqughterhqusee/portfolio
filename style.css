@@ -596,7 +596,8 @@ nav section:hover {
 #home-content{
     animation: width-open 3s forwards;
     animation-delay: 1s;
-    /* width: 50%; */
+    animation-fill-mode: forwards;
+    width: 0%;
     opacity: 0;
     /* visibility: hidden; */
 }
@@ -617,6 +618,7 @@ nav section:hover {
     100% {
         /* visibility: visible; */
         opacity: 1;
+        width: 50%;
     }
 }
 

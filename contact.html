@@ -11,10 +11,10 @@
 </head>
 
 <body>
-    <section class="wrapper">
+    <section class="port-wrapper row-tot-center">
         <!-- the wrapper keeps everything centered in the middle of the page -->
 
-        <nav class="column-space-around">
+        <nav class="column-space-around fadein">
             <section class="column" id="nav-about">
                 <img src="/images/icons/about-icon.svg" alt="About">
                 <p>ABOUT</p>
@@ -36,51 +36,59 @@
             </section>
 
             <section class="column" id="nav-contact">
-                    <img src="/images/icons/contact-icon.svg" alt="Contact">
-                    <p>CONTACT</p>
+                <img src="/images/icons/contact-icon.svg" alt="Contact">
+                <p>CONTACT</p>
             </section>
         </nav>
 
-        <section class="mainwrap">
+        <section id="home-content" class="row-center center-sizer main">
 
-            <div class="divhorz row">
+            <div class="column-left brackets">
                 <!-- creates a row with the two tops of the brackets -->
-                <div></div>
-                <div></div>
+                <div class="top-div"></div>
+                <div class="long-div"></div>
+                <div class="top-div"></div>
             </div>
 
-            <section class="column">
+            <section id="contact-content" class="column">
 
-                <p>Thanks for taking the time to browse my portfolio! I hope you found interest in my work. I'd be more
+                <p class="con-top kosugi">
+                    Thanks for taking the time to browse my portfolio! I hope you found interest in my work. I'd be more
                     than
                     happy to respond to any questions you have about me, my projects, or my current employment status.
                 </p>
 
-                <section class="row">
+                <section class="row-space-btwn left con-rows">
 
-                    <section class="column">
+                    <section class="column-left con-left kosugi">
 
                         <!-- contains left side info and image -->
 
                         <img src="images/contact.png"
                             alt="A black and white halftoned image of two eyes looking to the left.">
 
-                        <p>icaruswedekind@gmail.com</p>
+                        <p class="kosugi email">icaruswedekind@gmail.com</p>
 
-                        <p>Please keep in mind that I do not support, endorse, or plan to provide content for NFT or AI
-                            organisations. NFTs and cryptocurrency are currently harmful to our environment, and many
-                            honest
-                            artists suffer from both the NFT and AI industries. Please do not seek to recruit me if the
-                            employment is affiliated with these industries. Thank you.
+                        <p>
+                            <small class="kosugi">
+                                Please keep in mind that I do not support, endorse, or plan to provide content for NFT
+                                or AI
+                                organisations. NFTs and cryptocurrency are currently harmful to our environment, and
+                                many
+                                honest
+                                artists suffer from both the NFT and AI industries. Please do not seek to recruit me if
+                                the
+                                employment is affiliated with these industries. Thank you.
+                            </small>
                         </p>
 
-                        <section class="row">
+                        <section class="row-space-btwn con-links">
                             <!-- contains page links -->
-                            <a href="">
+                            <a class="kosugi" href="resume.html">
                                 Resume >
                             </a>
 
-                            <a href="">
+                            <a class="kosugi" href="about.html">
                                 About >
                             </a>
 
@@ -88,15 +96,18 @@
 
                     </section>
 
-                    <section class="column">
+                    <section class="column-left-around con-right">
 
                         <img src="images/logo/contactLogo.png" alt="A stylised image of the word 'contact'.">
 
-                        <section class="row">
+                        <section class="row-around-nowrap con-card">
                             <!-- current employment notifier -->
-                            <div></div>
+                            <span class="pinger">
+                                <span class="pulsar transform animate-ping"></span>
+                                <span class="pulsar-overlay"></span>
+                            </span>
 
-                            <p>Currently looking for freelance or part-time employment.</p>
+                            <p class="kosugi">Currently looking for freelance or part-time employment.</p>
 
                         </section>
 
@@ -105,14 +116,17 @@
                 </section>
 
             </section>
-            
+
+            <div class="column-right brackets">
+                <!-- creates a row with the two tops of the brackets -->
+                <div class="top-div"></div>
+                <div class="long-div"></div>
+                <div class="top-div"></div>
+            </div>
+
         </section>
 
     </section>
-
-    <footer>
-        <p>Icarus Wedekind &copy; 2024</p>
-    </footer>
 
 </body>
 

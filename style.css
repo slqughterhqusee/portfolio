@@ -34,6 +34,13 @@ body {
     justify-content: center;
 }
 
+.column-left-around {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
 .column-right {
     display: flex;
     flex-flow: column wrap;
@@ -56,10 +63,16 @@ body {
 }
 
 
-
 .row-space-around {
     display: flex;
     flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.row-around-nowrap {
+    display: flex;
+    flex-flow: row nowrap;
     align-items: center;
     justify-content: space-around;
 }
@@ -98,7 +111,7 @@ body {
     align-items: center;
 }
 
-.row-tot-center{
+.row-tot-center {
     display: flex;
     /* flex-flow: row wrap;*/
     flex-flow: row;
@@ -254,6 +267,8 @@ nav {
 
     /* animation? */
     transition: background-color .5s linear;
+    animation: fadein 2s forwards;
+    opacity: 0;
 }
 
 nav section {
@@ -425,7 +440,8 @@ nav section:hover {
 
 }
 
-.landing-btn a, .landing-btn a::after{
+.landing-btn a,
+.landing-btn a::after {
     text-decoration: none;
     background-color: rgb(243, 240, 235);
     margin: 0 .1em 0 .1em;
@@ -436,17 +452,17 @@ nav section:hover {
     transition: color 1s, border 1s, "background-color" 1s;
 }
 
-.landing-btn a:hover{
+.landing-btn a:hover {
     background-color: #181818;
     color: rgb(243, 240, 235);
     border: 1px solid white;
 }
 
-.long{
+.long {
     width: 70%;
 }
 
-.short{
+.short {
     width: 15%;
     /* make 800x800px */
 }
@@ -455,145 +471,261 @@ nav section:hover {
     width: 50%;
 }
 
-.fifwimg img{
+.fifwimg img {
     width: 50%;
 }
 
 /* home styling */
 
-.home-eyes img{
+.home-eyes img {
     width: 5em;
 }
 
-.top-eyes{
+.top-eyes {
     width: 100%;
 }
 
-.top-eyes img{
+.top-eyes img {
     margin: 1em;
 }
 
-.top-sec{
+.top-sec {
     width: 100%;
     margin-bottom: .5em;
     margin-left: 1.7em;
 }
 
-.abt-sec{
+.abt-sec {
     padding: 1em;
     text-align: center;
     border-radius: 17px;
     cursor: pointer;
 }
 
-.abt-sec:hover{
+.abt-sec:hover {
     background-color: white;
     color: black;
 }
 
-.about{
+.about {
     text-align: left;
     width: 100%;
 }
 
-.contact{
+.contact {
     width: 50%;
     padding: 2em 1em 2em 1em;
 }
 
-.resume{
+.resume {
     width: 50%;
     padding: 6em .5em 6em .5em;
 }
 
-.projects{
+.projects {
     width: 80%;
 }
 
-.left{
+.left {
     width: 60%;
 }
 
-.right{
+.right {
     width: 40%;
 }
 
-.logo img{
+.logo img {
     width: 75%;
     margin: 1em;
+    transition: width .2s linear;
 }
 
-.home-links, .home-links::after{
+.logo img:hover {
+    width: 80%;
+}
+
+.home-links,
+.home-links::after {
     width: 80%;
     font-size: 1.5em;
     color: white;
 }
 
-.home-links a:hover{
-    color:rgb(194, 184, 167);
+.home-links a:hover {
+    color: rgb(194, 184, 167);
 }
 
-.home-links img{
+.home-links img {
     width: 25%;
 }
 
-.h-l-top{
+.h-l-top {
     margin-top: .5em;
 }
 
-.center-sizer{
+.center-sizer {
     width: 50%;
 }
 
-.red{
+.red {
     border: 2px solid #5C0000;
 }
 
-.gold{
+.gold {
     border: 2px solid #655500;
 }
 
+/* contact */
+
+.con-top {
+    width: 80%;
+}
+
+#contact-content {
+    width: 90%;
+}
+
+.con-left,
+.con-right {
+    margin-top: 1em;
+    width: 45%;
+}
+
+.con-right img {
+    width: 75%;
+}
+
+.con-right {
+    height: 100%;
+}
+
+.con-left img{
+    align-self: center;
+    width: 100%;
+}
+
+.con-links {
+    width: 100%;
+    margin-top: 1em;
+    font-size: 1.5em;
+}
+
+.con-rows {
+    width: 80%;
+}
+
+.email {
+    margin: 1em 0 1em 0;
+    font-size: 1.5em;
+    
+}
+
+.con-card {
+    padding: 1em;
+    text-align: left;
+    border-radius: 17px;
+    font-size: .8em;
+    width: 80%;
+    border: 1px solid #ffffff;
+}
+
+.con-card p{
+    margin-left: 2em;
+}
+
+/* contact ping thing */
+
+.pinger{
+    display: flex;
+    width: .75rem;
+    height: .75rem;
+    position: relative;
+    margin-left: .5em;
+}
+
+.pulsar{
+    box-sizing: content-box;
+    border-radius: 9999px;
+    opacity: .75;
+    width: 100%;
+    height: 100%;
+    background-color: #B7B7B7;
+    animation: ping 2s cubic-bezier(0,0,.2,1) infinite;
+    display: inline-flex;
+    position: absolute;
+}
+
+.pulsar-overlay{
+    border-radius: 9999px;
+    display: inline-flex;
+    width: .75rem;
+    height: .75rem;
+    position: relative;
+    background-color: #B7B7B7;
+}
+
+.transform {
+    transform: translate(var(--un-translate-x)) translateY(var(--un-translate-y)) translateZ(var(--un-translate-z)) rotate(var(--un-rotate)) rotateX(var(--un-rotate-x)) rotateY(var(--un-rotate-y)) rotate(var(--un-rotate-z)) skew(var(--un-skew-x)) skewY(var(--un-skew-y)) scaleX(var(--un-scale-x)) scaleY(var(--un-scale-y)) scaleZ(var(--un-scale-z))
+}
+
+@keyframes ping {
+    0% {
+        transform: scale(1);
+        opacity: 1
+    }
+
+    75%,to {
+        transform: scale(2);
+        opacity: 0
+    }
+}
+
+
 /* eye animations */
 
-#eyeOne, #eyeSeven{
+#eyeOne,
+#eyeSeven {
     animation: blink 2s alternate infinite;
     animation-delay: 20s;
 }
 
-#eyeTwo, #eyeSix{
+#eyeTwo,
+#eyeSix {
     animation: blink 4s alternate infinite;
     animation-delay: 15s;
 }
 
-#eyeFive, #eyeFour{
+#eyeFive,
+#eyeFour {
     animation: blink 6s alternate infinite;
     animation-delay: 10s;
 }
 
-#eyeThree{
+#eyeThree {
     animation: blink 9s alternate infinite;
     animation-delay: 5s;
 }
 
-@keyframes blink{
-    from{
+
+@keyframes blink {
+    from {
         opacity: 1;
     }
 
-    to{
+    to {
         opacity: .01;
     }
 }
 
 /* animating the wrapper opening */
 
-.brackets{
-    animation: fadein 1s forwards;
+.brackets {
+    animation: fadein 2s forwards;
     opacity: 0;
 }
 
 
-#home-content{
+#home-content {
     animation: width-open 3s forwards;
     animation-delay: 1s;
     animation-fill-mode: forwards;
@@ -604,7 +736,7 @@ nav section:hover {
 
 
 
-@keyframes width-open{
+@keyframes width-open {
     0% {
         width: 0%;
     }
@@ -622,28 +754,28 @@ nav section:hover {
     }
 }
 
-@keyframes fadein{
-    from{
+@keyframes fadein {
+    from {
         opacity: 0;
     }
 
-    to{
+    to {
         opacity: 1;
     }
 }
 
 /* styling bracket divs */
 
-.brackets div{
+.brackets div {
     background-color: white;
 }
 
-.top-div{
+.top-div {
     height: 1px;
     width: 30px;
 }
 
-.long-div{
+.long-div {
     width: 1px;
     height: 700px;
 }

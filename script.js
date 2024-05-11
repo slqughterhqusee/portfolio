@@ -198,3 +198,25 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     })
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const navElements = document.querySelectorAll('[id^="con-"]');
+
+    console.log("Number of link elements found:", navElements.length);
+
+    navElements.forEach(function (link) {
+        console.log("Adding event listener to element with ID:", link.id);
+        link.addEventListener("click", function (event) {
+            console.log("Clicked on element with ID:", this.id);
+            event.preventDefault();
+            switch (this.id) {
+                case "con-card":
+                    window.open('https://www.linkedin.com/in/icarus-wedekind/', "_blank", "noopener, noreferrer");
+                    break;
+                default:
+                    console.log("Unknown element ID:", this.id);
+            }
+        });
+    })
+});

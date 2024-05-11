@@ -248,8 +248,8 @@ a::after {
 
 nav {
     box-sizing: content-box;
-    background-color: rgb(35, 0, 0);
-    color: rgb(219, 218, 210);
+    background-color: black;
+    color: rgb(249, 248, 244);
     border-right: 1px solid white;
 
     font-size: 1.5em;
@@ -280,15 +280,13 @@ nav section p {
 }
 
 nav:hover {
-    background-color: rgb(194, 184, 167);
-
+    background-color: #B7B7B7;
+    color: black;
 }
 
-nav section:hover {
-    color: #794a03;
+nav section p:hover {
+    text-decoration: underline;
 }
-
-
 
 .main {
     margin-left: 200px;
@@ -479,6 +477,11 @@ nav section:hover {
 
 .home-eyes img {
     width: 5em;
+    transition: opacity .3s ease-in;
+}
+
+.home-eyes img:hover {
+    opacity: .5;
 }
 
 .top-eyes {
@@ -526,18 +529,18 @@ nav section:hover {
     width: 80%;
 }
 
-.left {
+.abt-left {
     width: 60%;
 }
 
-.right {
+.abt-right {
     width: 40%;
 }
 
 .logo img {
     width: 75%;
     margin: 1em;
-    transition: width .2s linear;
+    transition: width .2s ease-in;
 }
 
 .logo img:hover {
@@ -593,15 +596,25 @@ nav section:hover {
 
 .con-right img {
     width: 75%;
+    transition: width .2s ease-in;
+}
+
+.con-right img:hover {
+    width: 80%;
 }
 
 .con-right {
     height: 100%;
 }
 
-.con-left img{
+.con-left img {
     align-self: center;
     width: 100%;
+    transition: opacity .3s ease-in;
+}
+
+.con-left img:hover {
+    opacity: .5;
 }
 
 .con-links {
@@ -617,7 +630,7 @@ nav section:hover {
 .email {
     margin: 1em 0 1em 0;
     font-size: 1.5em;
-    
+
 }
 
 .con-card {
@@ -629,13 +642,18 @@ nav section:hover {
     border: 1px solid #ffffff;
 }
 
-.con-card p{
+.con-card:hover {
+    background-color: white;
+    color: black;
+}
+
+.con-card p {
     margin-left: 2em;
 }
 
 /* contact ping thing */
 
-.pinger{
+.pinger {
     display: flex;
     width: .75rem;
     height: .75rem;
@@ -643,19 +661,19 @@ nav section:hover {
     margin-left: .5em;
 }
 
-.pulsar{
+.pulsar {
     box-sizing: content-box;
     border-radius: 9999px;
     opacity: .75;
     width: 100%;
     height: 100%;
     background-color: #B7B7B7;
-    animation: ping 2s cubic-bezier(0,0,.2,1) infinite;
+    animation: ping 2s cubic-bezier(0, 0, .2, 1) infinite;
     display: inline-flex;
     position: absolute;
 }
 
-.pulsar-overlay{
+.pulsar-overlay {
     border-radius: 9999px;
     display: inline-flex;
     width: .75rem;
@@ -674,12 +692,157 @@ nav section:hover {
         opacity: 1
     }
 
-    75%,to {
+    75%,
+    to {
         transform: scale(2);
         opacity: 0
     }
 }
 
+/* resume */
+
+.res-left {
+    width: 30%;
+    background-color: rgb(249, 248, 244);
+    color: black;
+    padding: 1em;
+}
+
+.res-left ul,
+.res-right ul {
+    list-style-type: none;
+}
+
+.res-left a {
+    color: black;
+    font-size: 2em;
+}
+
+.res-left a::after,
+.res-left a:hover {
+    color: #5C0000;
+}
+
+.res-div {
+    width: 90%;
+    height: 2px;
+}
+
+.res-left .res-div {
+    background-color: #C9B78D;
+    margin: 1em 0 1em 0;
+}
+
+.res-right {
+    color: rgb(249, 248, 244);
+}
+
+.res-right .res-div {
+    background-color: #5C0000;
+    margin-top: 1em;
+}
+
+.res-right h4 {
+    background-color: #5C0000;
+    padding: 1em;
+}
+
+.gpa {
+    width: 80%;
+    padding: 1em;
+    background-color: #C9B78D;
+    color: #5C0000;
+}
+
+.res-end {
+    width: 50%;
+    align-self: center;
+}
+
+.res-right ul {
+    list-style-type: disc;
+}
+
+/* about */
+
+.head-left {
+    background-image: url(/images/portrait/aboutHead.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.head-left p{
+    font-size: 1.5em;
+}
+
+.abt-head {
+    width: 100%;
+}
+
+.head-right,
+.head-left {
+    width: 50%;
+    height: 25em;
+}
+
+.innerHead{
+    width: 100%;
+    background-color: #00000090;
+    padding: 2em;
+}
+
+.head-right{
+    background-color: rgb(249, 248, 244);
+    color: black;
+    padding: 1em;
+}
+
+.head-right h5{
+    width: 80%;
+}
+
+.head-right div{
+    width: 2px;
+    height: 80%;
+    background-color: #181818;
+    margin: 2em;
+}
+
+.about-sum{
+    width: 80%;
+    margin: 2em 0 2em 0;
+}
+
+.abt-div{
+    width: 40%;
+    height: 2px;
+    background-color: white;
+    margin: 1em 0 1em 0;
+}
+
+.image-sec{
+    margin: 2em 0 2em 0;
+}
+
+.image-sec .row-space-btwn img:hover{
+    opacity: .5;
+}
+
+.abt-mid-bg{
+    width: 100%;
+    background-image: url(/images/aboutBg.png);
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+    padding: 3em 0 3em 0;
+}
+
+.abt-mid{
+    background-color: #00000090;
+    padding: 2em;
+    width: 50%;
+}
 
 /* eye animations */
 
@@ -762,6 +925,10 @@ nav section:hover {
     to {
         opacity: 1;
     }
+}
+
+.fadein {
+    animation: fadein 2s forwards;
 }
 
 /* styling bracket divs */

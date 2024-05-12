@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <section class="wrapper navwrap row">
+    <section class="wrapper fadein">
 
         <nav class="column-space-around">
             <section class="column" id="nav-about">
@@ -35,136 +35,204 @@
             </section>
 
             <section class="column" id="nav-contact">
-                    <img src="/images/icons/contact-icon.svg" alt="Contact">
-                    <p>CONTACT</p>
+                <img src="/images/icons/contact-icon.svg" alt="Contact">
+                <p>CONTACT</p>
             </section>
         </nav>
 
-        <section class="column">
+        <section class="main eighty-sizer">
             <!-- header area -->
-            <section class="right column">
+            <section class="land-head">
                 <h1>Budgeting Calculator</h1>
-                <a href="https://eecubudgeting-icarus.netlify.app/" class="kosugi">https://eecubudgeting-icarus.netlify.app/</a>
+                <br>
+                <a target="_blank" href="https://eecubudgeting-icarus.netlify.app/"
+                    class="kosugi">https://eecubudgeting-icarus.netlify.app/</a>
                 <p class="kosugi">Late Feb 2024 - Mid Mar 2024</p>
             </section>
 
-            <div></div>
+            <div class="landing-div"></div>
+            <br><br>
 
             <!-- intro and index -->
 
-            <section class="row">
+            <section class="row-space-btwn">
 
-                <section class="column" id="budgIntro">
+                <section class="intro" id="budgIntro">
                     <h2>
                         Intro
                     </h2>
-                    <div></div>
+                    <div class="landing-div"></div>
 
                     <p>
-                        This project was a collaboration with the EECU, which gave budgeting presentations to our class just a few days before this was assigned. We were tasked with creating a budgeting site based off of concepts we researched online. This was also my first time independently utilising JavaScript within a site. Besides this, my classmates and I were directed to have others code our site for us. During this project, I not only learnt how to communicate from a managerial stance, but also acquired experience coding for others as well.
+                        This project was a collaboration with the EECU, which gave budgeting presentations to our class
+                        just a few days before this was assigned. We were tasked with creating a budgeting site based
+                        off of concepts we researched online. This was also my first time independently utilising
+                        JavaScript within a site. Besides this, my classmates and I were directed to have others code
+                        our site for us. During this project, I not only learnt how to communicate from a managerial
+                        stance, but also acquired experience coding for others as well.
                     </p>
                 </section>
 
-                <section class="column">
+                <section class="column intro-index">
                     <!-- add text-dec underline -->
                     <h3>
-                        Index
+                        INDEX
                     </h3>
 
                     <section class="column index">
-                        <a href="#budgIntro">Intro</a>
-                        <a href="#budgProto">Prototyping</a>
-                        <a href="#budgFinal">Final Site</a>
-                        <a href="#budgBTS">Extra + BTS</a>
+                        <ul>
+                            <li><a href="#budgIntro">Intro</a></li>
+                            <li><a href="#budgProto">Prototyping</a></li>
+                            <ul class="tab">
+                                <li><a href="budgDesign">Colorways & Aesthetic</a></li>
+                            </ul>
+                            <li><a href="#budgFinal">Final Site</a></li>
+                            <ul class="tab">
+                                <li><a href="#budgResQ">Result Quality</a></li>
+                            </ul>
+                            <li><a href="#budgBTS">Extra + BTS</a></li>
+                        </ul>
                     </section>
 
                 </section>
 
             </section>
 
-            <!-- visual breaker, content start -->
+            <br><br>
 
             <h2 id="budgProto">Prototyping</h2>
-            <div></div>
+            <div class="landing-div"></div>
 
-            <section class="row">
-                <img src="/images/budg/budg-hifi.png" alt="">
-            </section>
 
-            <p>
-                After completing a competitive audit on 5 sites, the thing I was trying to avoid the most was having my design look like how the DMV feels. I focused on having a simple user-friendly design with appropriate, fresh-looking colors and a business-friendly look. While my site was originally planned to be two pages, my understanding of JavaScript was too rudimentary to properly implement some of the features I wanted. I adapted my site's needs to my own capabilities as best I could, but was unable to discern how to make a key part of my site (chart.js) function properly.
-            </p>
-
-            <h3>Colorways and Aesthetic</h3>
-
-            <section class="row">
-                <img src="" alt="">
-            </section>
+            <img class="long" src="/images/budg/budg-hifi.png" alt="">
 
             <p>
-                As I researched competitor designs for budgeting sites, I found a common color scheme. Most sites tended to use some combination of dark greens, blues, greys, or white. However, two sites (<a href="https://www.voya.com/tool/budget-calculator">Voya</a> and <a href="https://www.thebalancemoney.com/budgeting-calculator-5120904">The Balance Money</a>) had very unexpected palettes. The unique colorways of these sites inspired me, and I enjoyed how they appeared more friendly to the eye. Originally, I intended on using colours similar to Voya's choices. However, in the end, I recalled how a palette can truly make or break a site such as in my experience creating Jurassic Expeditions. I fell back on safer green/blue tones, but lightened them to be less threatening.
+                After completing a competitive audit on 5 sites, the thing I was trying to avoid the most was having my
+                design look like how the DMV feels. I focused on having a simple user-friendly design with appropriate,
+                fresh-looking colors and a business-friendly look. While my site was originally planned to be two pages,
+                my understanding of JavaScript was too rudimentary to properly implement some of the features I wanted.
+                I adapted my site's needs to my own capabilities as best I could, but was unable to discern how to make
+                a key part of my site (chart.js) function properly.
             </p>
+
+            <br>
+
+            <h3 id="budgDesign">Colorways and Aesthetic</h3>
+
+            <br>
+
+            <img class="long" src="/images/budg/budg-palette.png" alt="">
+
+            <br><br>
+
+            <p>
+                As I researched competitor designs for budgeting sites, I found a common color scheme. Most sites tended
+                to use some combination of dark greens, blues, greys, or white. However, two sites (<a target="_blank"
+                    href="https://www.voya.com/tool/budget-calculator">Voya</a> and <a target="_blank"
+                    href="https://www.thebalancemoney.com/budgeting-calculator-5120904">The Balance Money</a>) had very
+                unexpected palettes. The unique colorways of these sites inspired me, and I enjoyed how they appeared
+                more friendly to the eye. Originally, I intended on using colours similar to Voya's choices. However, in
+                the end, I recalled how a palette can truly make or break a site such as in my experience creating
+                Jurassic Expeditions. I fell back on safer green/blue tones, but lightened them to be less threatening.
+            </p>
+
+            <br>
 
             <!-- visual breaker, final start -->
 
             <h2 id="budgFinal">Final Site</h2>
-            <div></div>
+            <div class="landing-div"></div>
 
-            <section class="column">
-                <section class="row">
+            <section class="row-space-btwn">
 
-                    <img src="/images/budg/home-fin.png" alt="">
-                    <img src="/images/budg/budg-results.png" alt="">
+                <img style="width: 45%" src="/images/budg/home-fin.png" alt="">
+                <img style="width: 45%" src="/images/budg/budg-results.png" alt="">
 
-                </section>
             </section>
+
+            <br>
 
             <p>
-                My final design remained very true to my original prototype, though I left out some features like seeing the change between your previous budgeting to your current. Overall, I'm somewhat proud of how it turned out. If I was to return to this project, I would add back in those features and make the pie chart functional.
+                My final design remained very true to my original prototype, though I left out some features like seeing
+                the change between your previous budgeting to your current. Overall, I'm somewhat proud of how it turned
+                out. If I was to return to this project, I would add back in those features and make the pie chart
+                functional.
             </p>
 
-            <h3>Result Quality</h3>
+            <br>
 
-            <section class="row">
-                <section class="column">
-                    <img src="" alt="">
-                    <h3>Success</h3>
-                    <p>
-                        This project was an overall improvement from my first interactable site, Jurassic Expeditions. The design of my prototype translated over almost seamlessly into code. I also learnt how to properly communicate with “employees” about what I was looking for. This project may not have turned out perfectly, but it was nonetheless a valued learning experience for JavaScript implementation and teamwork. 
-                    </p>
-                </section>
-                <section class="column">
-                    <img src="" alt="">
-                    <h3>Failure</h3>
-                    <p>
-                        The failures of this site mostly reside within the capabilities of my JavaScript. I was unable to display many values correctly. I also had issues with properly styling displays at the end of the site as well as the labelling for the chart/s.
-                    </p>
+            <h3 id="budgResQ">Result Quality</h3>
+
+            <section class="column-left">
+
+                <img style="align-self: center;" class="fiftywidth" src="/images/budg/budg-hifi.png" alt="">
+
+                <br>
+
+                <section class="row-btwn-top">
+                    <section class="column resqual">
+                        <h3>Success</h3>
+                        <br>
+                        <p>
+                            This project was an overall improvement from my first interactable site, Jurassic
+                            Expeditions.
+                            The design of my prototype translated over almost seamlessly into code. I also learnt how to
+                            properly communicate with “employees” about what I was looking for. This project may not
+                            have
+                            turned out perfectly, but it was nonetheless a valued learning experience for JavaScript
+                            implementation and teamwork.
+                        </p>
+                    </section>
+                    <section class="column resqual">
+                        <h3>Failure</h3>
+                        <br>
+                        <p>
+                            The failures of this site mostly reside within the capabilities of my JavaScript. I was
+                            unable
+                            to display many values correctly. I also had issues with properly styling displays at the
+                            end of
+                            the site as well as the labelling for the chart/s.
+                        </p>
+                    </section>
                 </section>
             </section>
 
+            <br>
 
             <h3 id="budgTakeaways">Takeaways</h3>
+            <br>
             <p>
-                Through this project, I better acquainted myself with JavaScript. Proper user interface also came to me more clearly as I was designing this. I believe this site was the catalyst which helped a lot of aspects within the coding and UX world click for me.
+                Through this project, I better acquainted myself with JavaScript. Proper user interface also came to me
+                more clearly as I was designing this. I believe this site was the catalyst which helped a lot of aspects
+                within the coding and UX world click for me.
             </p>
 
-            <h2 id="budgBTS">Extra + BTS</h2>
-            <div></div>
+            <br><br>
 
-            <ul>
+            <h2 id="budgBTS">Extra + BTS</h2>
+            <div class="landing-div"></div>
+
+            <ul class="tab">
                 <li>
-                    For two-three weeks this project was completely coded by classmates following either my word-for-word directions or going off my Figma prototype.
+                    For two-three weeks this project was completely coded by classmates following either my
+                    word-for-word directions or going off my Figma prototype.
                 </li>
+                <br>
                 <li>
-                    I spent an additional 4-5 days (in total) polishing the site by myself. This total span of time took place off and on over the course of 2-3 more weeks.
+                    I spent an additional 4-5 days (in total) polishing the site by myself. This total span of time took
+                    place off and on over the course of 2-3 more weeks.
                 </li>
             </ul>
 
             <!-- nav buttons -->
 
-            <section class="row">
-                <a href="" class="wallpoet">BACK</a>
-                <a href="" class="wallpoet">NEXT</a>
+            <section class="row-space-btwn landing-foot">
+                <p class="kosugi">Icarus Wedekind &copy; 2024</p>
+
+                <section class="landing-btn">
+                    <a href="jurassic-expeditions.html" class="wallpoet">BACK</a>
+                    <a href="slow-saga.html" class="wallpoet">NEXT</a>
+                </section>
             </section>
 
         </section>
@@ -172,9 +240,9 @@
 
     </section>
 
-    <footer>
-        <p class="kosugi">Icarus Wedekind &copy; 2024</p>
-    </footer>
+
+
+
 
 </body>
 

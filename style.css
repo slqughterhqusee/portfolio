@@ -70,6 +70,13 @@ body {
     justify-content: space-around;
 }
 
+.row-around-top {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
 .row-around-nowrap {
     display: flex;
     flex-flow: row nowrap;
@@ -474,6 +481,19 @@ nav section p:hover {
     width: 50%;
 }
 
+.resqual {
+    width: 45%;
+}
+
+.resqual img {
+    width: 90%;
+}
+
+iframe {
+    width: 100%;
+    height: 500px;
+}
+
 /* home styling */
 
 .home-eyes img {
@@ -773,7 +793,7 @@ nav section p:hover {
     background-size: cover;
 }
 
-.head-left p{
+.head-left p {
     font-size: 1.5em;
 }
 
@@ -787,50 +807,50 @@ nav section p:hover {
     height: 25em;
 }
 
-.innerHead{
+.innerHead {
     width: 100%;
     background-color: #00000090;
     padding: 2em;
 }
 
-.head-right{
+.head-right {
     background-color: rgb(249, 248, 244);
     color: black;
     padding: 1em;
 }
 
-.head-right h5{
+.head-right h5 {
     width: 80%;
 }
 
-.head-right div{
+.head-right div {
     width: 2px;
     height: 80%;
     background-color: #181818;
     margin: 2em;
 }
 
-.about-block{
+.about-block {
     width: 80%;
     margin: 2em 0 2em 0;
 }
 
-.abt-div{
+.abt-div {
     width: 20%;
     height: 2px;
     background-color: white;
     margin: 1em 0 1em 0;
 }
 
-.image-sec{
+.image-sec {
     margin: 2em 0 2em 0;
 }
 
-.image-sec .row-space-btwn img:hover{
+.image-sec .row-space-btwn img:hover {
     opacity: .5;
 }
 
-.abt-mid-bg{
+.abt-mid-bg {
     width: 100%;
     background-image: url(/images/aboutBg.png);
     background-repeat: none;
@@ -839,21 +859,21 @@ nav section p:hover {
     padding: 3em 0 3em 0;
 }
 
-.abt-mid{
+.abt-mid {
     background-color: #000000b5;
     padding: 2em;
     width: 50%;
 }
 
-.abt-mid:hover{
+.abt-mid:hover {
     background-color: #000000e1;
 }
 
-.about-block a{
+.about-block a {
     text-decoration: none;
 }
 
-.about-block a:hover{
+.about-block a:hover {
     text-decoration: underline;
 }
 
@@ -1044,4 +1064,93 @@ nav section p:hover {
 
 .intro-index h3 {
     text-decoration: underline;
+}
+
+@media only screen and (max-width: 2200px) {
+    #portMain {
+        margin: 0;
+    }
+
+    .contact,
+    .resume {
+        font-size: .8em;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+
+    #home-wrapper {
+        height: 0;
+        width: 100%;
+        animation: height-open 2s forwards;
+    }
+
+    @keyframes height-open {
+        0% {
+            height: 0;
+        }
+
+        75% {
+            height: 50vh;
+            /* visibility:hidden; */
+            opacity: 0;
+        }
+
+        100% {
+            /* visibility: visible; */
+            opacity: 1;
+            height: 100vh;
+        }
+    }
+
+    nav {
+        height: 200px;
+        width: 100%;
+    }
+
+    .main {
+        margin: 0;
+    }
+
+    .port-wrapper, .wrapper{
+        display: flex;
+        flex-flow: column;
+    }
+
+    .eighty-sizer {
+        width: 100%;
+    }
+
+    .brackets {
+        margin: 0;
+    }
+
+    .top-div{
+        height: 30px;
+        width: 1px;
+    }
+
+    .long-div{
+        width: 400px;
+        height: 1px;
+    }
+
+    p {
+        font-size: .5em;
+    }
+
+    .media-row-top{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .media-row-bottom{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
 }

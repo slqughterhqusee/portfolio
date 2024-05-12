@@ -361,6 +361,7 @@ nav section p:hover {
 .carousel img {
     width: 50%;
     /* edit talls to 1050px height photopea */
+    /* for squares, 475px x 355px */
 }
 
 
@@ -809,13 +810,13 @@ nav section p:hover {
     margin: 2em;
 }
 
-.about-sum{
+.about-block{
     width: 80%;
     margin: 2em 0 2em 0;
 }
 
 .abt-div{
-    width: 40%;
+    width: 20%;
     height: 2px;
     background-color: white;
     margin: 1em 0 1em 0;
@@ -839,9 +840,21 @@ nav section p:hover {
 }
 
 .abt-mid{
-    background-color: #00000090;
+    background-color: #000000b5;
     padding: 2em;
     width: 50%;
+}
+
+.abt-mid:hover{
+    background-color: #000000e1;
+}
+
+.about-block a{
+    text-decoration: none;
+}
+
+.about-block a:hover{
+    text-decoration: underline;
 }
 
 /* eye animations */
@@ -976,8 +989,8 @@ nav section p:hover {
 .index {
     width: 90%;
     height: 20%;
-    background-color: rgb(255, 244, 223);
-    border: 3px solid #e7c100;
+    background-color: white;
+    border: 3px solid #8d0000;
     color: #5C4651;
     font-family: "Kosugi Maru", sans-serif;
     overflow-y: scroll;

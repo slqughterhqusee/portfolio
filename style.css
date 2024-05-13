@@ -1079,10 +1079,34 @@ iframe {
 
 @media only screen and (max-width: 620px) {
 
-    #home-wrapper {
-        height: 0;
+
+    #home-content, #home-wrapper, .abt-left, .abt-right, .about{
+        width:100%;
+    }
+
+    .projects{
+        width: 50%;
+    }
+
+    .logo{
+        margin-left: .5em;
+        width: 50%;
+    }
+
+    .resume, .contact{
         width: 100%;
-        animation: height-open 2s forwards;
+    }
+
+    .home-links{
+        margin: 0;
+        width: fit-content;
+    }
+
+    #home-content{
+        opacity: 0;
+        height: 0;
+        width: 70%;
+        animation: height-open 1s forwards;
     }
 
     @keyframes height-open {
@@ -1091,25 +1115,29 @@ iframe {
         }
 
         75% {
-            height: 50vh;
-            /* visibility:hidden; */
+            height: 50%;
             opacity: 0;
         }
 
         100% {
-            /* visibility: visible; */
             opacity: 1;
-            height: 100vh;
+            height: 100%;
         }
     }
 
     nav {
-        height: 200px;
+        height: 100px;
         width: 100%;
+        border-bottom: 1px solid white;
+    }
+
+    nav section img{
+        width: 1em;
     }
 
     .main {
-        margin: 0;
+        margin-top: 100px;
+        margin-left: 0;
     }
 
     .port-wrapper, .wrapper{
@@ -1131,12 +1159,36 @@ iframe {
     }
 
     .long-div{
-        width: 400px;
+        width: 500px;
         height: 1px;
     }
 
+    .abt-right{
+        margin-top: 1em;
+    }
+
     p {
-        font-size: .5em;
+        font-size: .8em;
+    }
+
+    h5{
+        font-size: .8em;
+    }
+
+    h4{
+        font-size: 1em;
+    }
+
+    h3{
+        font-size: 1.3em;
+    }
+
+    h2{
+        font-size: 1.5em;
+    }
+
+    h1{
+        font-size: 1.8em;
     }
 
     .media-row-top{
@@ -1153,4 +1205,56 @@ iframe {
         align-items: flex-end;
     }
 
+    .media-row-cent-nowr{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .media-row-btwn{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .media-row-around{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .media-column{
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .home-eyes img{
+        display: none;
+    }
+
+    #eyeFive{
+        display: block;
+        margin: 1em 0 1em 0;
+    }
+
+    .fiftywidth{
+        width: 40%;
+    }
+
+    .media-wider{
+        width: 80%;
+    }
+
+    .res-left, .res-right{
+        width: 90%;
+    }
+
+    .res-right{
+        margin-top: 1em;
+    }
 }

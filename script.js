@@ -229,8 +229,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function aFastCarousel(carouselId, idx = 0) {
-    let nextButton = document.querySelector(`.${carouselId}-but > #allFor`);
-    let prevButton = document.querySelector(`.${carouselId}-but > #allBack`);
+    let nextButton = document.querySelector(`.${carouselId}-but > #forward`);
+    let prevButton = document.querySelector(`.${carouselId}-but > #backward`);
     let cSlides = document.querySelectorAll(`#${carouselId} > .slide`);
     
     if (idx >= cSlides.length) {
@@ -252,6 +252,3 @@ function aFastCarousel(carouselId, idx = 0) {
         aFastCarousel(carouselId, idx - 1);
     });
 }
-
-// Example usage:
-aFastCarousel('carousel');

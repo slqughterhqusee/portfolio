@@ -1085,7 +1085,7 @@ iframe {
     }
 
     .projects{
-        width: 50%;
+        width: 70%;
     }
 
     .logo{
@@ -1143,6 +1143,7 @@ iframe {
     .port-wrapper, .wrapper{
         display: flex;
         flex-flow: column;
+        height: fit-content;
     }
 
     .eighty-sizer {
@@ -1151,6 +1152,15 @@ iframe {
 
     .brackets {
         margin: 0;
+        width: 100%;
+    }
+
+    .brackets-top{
+        margin-top: 1em;
+    }
+
+    .brackets-bottom{
+        margin-bottom: 1em;
     }
 
     .top-div{
@@ -1159,7 +1169,7 @@ iframe {
     }
 
     .long-div{
-        width: 500px;
+        width: 90%;
         height: 1px;
     }
 
@@ -1193,14 +1203,14 @@ iframe {
 
     .media-row-top{
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: row nowrap;
         justify-content: center;
         align-items: flex-start;
     }
 
     .media-row-bottom{
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: row nowrap;
         justify-content: center;
         align-items: flex-end;
     }
@@ -1239,7 +1249,7 @@ iframe {
 
     #eyeFive{
         display: block;
-        margin: 1em 0 1em 0;
+        margin: 2em 0 2em 0;
     }
 
     .fiftywidth{

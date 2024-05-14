@@ -18,87 +18,94 @@ let index = 0;
 
 //basic functions
 function getId(id) {
+    console.log('the id is: ' + id);
     return document.getElementById(id);
 };
 
 function isHidden(id) {
-    return getId(id).classList.contains("hidden");
+    console.log('is id hidden: ' + id);
+    let theElement = document.getElementById(id);
+    console.log('the element is: ' + theElement)
+    return theElement.classList.contains("hidden");
 };
 
 //make sure index is correct
-console.log("Starting index", index);
+// console.log("Starting index", index);
 
-function carouselData(key, carousel, carCap) {
+// function carouselData(key, carousel, carCap) {
 
-    //grab necessary ID's
-    let curCarousel = getId(carousel);
-    let curCap = getId(carCap);
+//     //grab necessary ID's
+//     let curCarousel = getId(carousel);
+//     let curCap = getId(carCap);
 
-    //update images
-    curCarousel.innerHTML = `<img src=${carouselImg[key][index]}>`;
-    curCap.innerHTML = `<p> <small> ${carouselDesc[key][index]} </small> </p>`;
+//     //update images
+//     curCarousel.innerHTML = `<img src=${carouselImg[key][index]}>`;
+//     curCap.innerHTML = `<p> <small> ${carouselDesc[key][index]} </small> </p>`;
 
-    // Use modulo to cycle through images
-    index = (index + (carouselImg[key].length)) % (carouselImg[key].length);
+//     // Use modulo to cycle through images
+//     index = (index + (carouselImg[key].length)) % (carouselImg[key].length);
 
-    if (index === 0) {
-        if (isHidden(getId(`${key}Placeholder`)))
-            getId(`${key}Placeholder`).classList.remove('hidden');
-    }
-    else if (!isHidden(getId(`${key}Placeholder`))) {
-        getId(`${key}Placeholder`).classList.add('hidden');
-    }
-};
+//     if (index === 0) {
+//         console.log(`${key}Placeholder`)
+//         console.log(getId(`${key}Placeholder`));
+//         if (isHidden(`${key}Placeholder`)){
+//             getId(`${key}Placeholder`).classList.remove('hidden');
+//         }
+//     }
+//     else if (!isHidden(getId(`${key}Placeholder`))) {
+//         getId(`${key}Placeholder`).classList.add('hidden');
+//     }
+// };
 
-function carouselDiscriminator() {
-    const allCarousel = getId("allCarousel");
-    const bruxCarousel = getId("bruxCarousel");
-    const myoCarousel = getId("myoCarousel");
+// function carouselDiscriminator() {
+//     const allCarousel = getId("allCarousel");
+//     const bruxCarousel = getId("bruxCarousel");
+//     const myoCarousel = getId("myoCarousel");
 
-    switch (true) {
-        case allCarousel !== null:
-            carouselData("allegories", "allCarousel", "allCap");
-            break;
-        case bruxCarousel !== null:
-            carouselData("bruxist", "bruxCarousel", "bruxCap");
-            break;
-        case myoCarousel !== null:
-            carouselData("myopic", "myoCarousel", "myoCap");
-            break;
-    }
-};
+//     switch (true) {
+//         case allCarousel !== null:
+//             carouselData("allegories", "allCarousel", "allCap");
+//             break;
+//         case bruxCarousel !== null:
+//             carouselData("bruxist", "bruxCarousel", "bruxCap");
+//             break;
+//         case myoCarousel !== null:
+//             carouselData("myopic", "myoCarousel", "myoCap");
+//             break;
+//     }
+// };
 
-let theClickyThing = document.getElementsByClassName('carousel-but');
-for (thing of theClickyThing) {
+// let theClickyThing = document.getElementsByClassName('carousel-but');
+// for (thing of theClickyThing) {
 
-    thing.addEventListener("click", function (event) {
-        event.preventDefault();
-        //make sure it's grabbing the right ID
-        console.log(event.target.id)
+//     thing.addEventListener("click", function (event) {
+//         event.preventDefault();
+//         //make sure it's grabbing the right ID
+//         console.log(event.target.id)
 
-        switch (event.target.id) {
-            case "allFor":
-                index = (index + 1) % (carouselImg.allegories.length);
-                break;
-            case "bruxFor":
-                index = (index + 1) % (carouselImg.bruxist.length);
-                break;
-            case "myoFor":
-                index = (index + 1) % (carouselImg.myopic.length);
-                break;
-            case "allBack":
-                index = (index - 1) % (carouselImg.allegories.length);
-                break;
-            case "bruxBack":
-                index = (index - 1) % (carouselImg.bruxist.length);
-                break;
-            case "myoBack":
-                index = (index - 1) % (carouselImg.myopic.length);
-                break;
-        }
-        carouselDiscriminator();
-    });
-}
+//         switch (event.target.id) {
+//             case "allFor":
+//                 index = (index + 1) % (carouselImg.allegories.length);
+//                 break;
+//             case "bruxFor":
+//                 index = (index + 1) % (carouselImg.bruxist.length);
+//                 break;
+//             case "myoFor":
+//                 index = (index + 1) % (carouselImg.myopic.length);
+//                 break;
+//             case "allBack":
+//                 index = (index - 1) % (carouselImg.allegories.length);
+//                 break;
+//             case "bruxBack":
+//                 index = (index - 1) % (carouselImg.bruxist.length);
+//                 break;
+//             case "myoBack":
+//                 index = (index - 1) % (carouselImg.myopic.length);
+//                 break;
+//         }
+//         carouselDiscriminator();
+//     });
+// }
 
 
 //make sure the carousels are being called
@@ -220,3 +227,31 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     })
 });
+
+function aFastCarousel(carouselId, idx = 0) {
+    let nextButton = document.querySelector(`.${carouselId}-but > #allFor`);
+    let prevButton = document.querySelector(`.${carouselId}-but > #allBack`);
+    let cSlides = document.querySelectorAll(`#${carouselId} > .slide`);
+    
+    if (idx >= cSlides.length) {
+        idx = 0;
+    }
+    if (idx < 0) {
+        idx = cSlides.length - 1;
+    }
+    
+    cSlides.forEach(slide => slide.classList.add('hidden'));
+    cSlides[idx].classList.remove('hidden');
+
+    nextButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        aFastCarousel(carouselId, idx + 1);
+    });
+    prevButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        aFastCarousel(carouselId, idx - 1);
+    });
+}
+
+// Example usage:
+aFastCarousel('carousel');

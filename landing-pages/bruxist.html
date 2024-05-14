@@ -12,7 +12,7 @@
 <body>
     <section class="wrapper column fadein">
 
-        <nav class="column-space-around">
+        <nav class="column-space-around media-row-around">
             <section class="column" id="nav-about">
                 <img src="/images/icons/about-icon.svg" alt="About">
                 <p>ABOUT</p>
@@ -71,19 +71,19 @@
                     </small></p>
                 </div>
                 <div class="slide column">
-                    <img src="/images/bruxist/x-full.png" alt="">
+                    <img class="carousel-tall" src="/images/bruxist/x-full.png" alt="">
                     <p><small>
                         X holding Lenen in their palm. Funnily enough, I made this piece before watching Blade Runner 2049, which has a scene similar to this concept. Lenen and X have a kind of tense romance, which I tried to portray through the intense power dissonance between them&mdash;mortal and god.
                     </small></p>
                 </div>
                 <div class="slide column">
-                    <img src="/images/bruxist/muya-full.png" alt="">
+                    <img class="carousel-tall" src="/images/bruxist/muya-full.png" alt="">
                     <p><small>
                         This piece is part of a collection, but is by far my proudest out of the remaining three. I had originally wanted to have a piece that felt intimately intimidating, like the one between X and Lenen. Eventually, I ended up working this into an actual scene.
                     </small></p>
                 </div>
                 <div class="slide column">
-                    <img src="/images/bruxist/yamar-full.png" alt="">
+                    <img class="carousel-tall" src="/images/bruxist/yamar-full.png" alt="">
                     <p><small>
                         One of the first sketches for Bruxist I ever did. Most of the first drawings for this story were done in a small handheld green notebook in my English class.
                     </small></p>
@@ -92,8 +92,8 @@
 
                 <br>
                     <section class="carousel-but row">
-                        <button id="bruxBack"> <img src="/images/icons/left-caret-svg.svg"> </button>
-                        <button id="bruxFor"> <img src="/images/icons/right-caret.svg"> </button>
+                        <button id="backward"> <img src="/images/icons/left-caret-svg.svg"> </button>
+                        <button id="forward"> <img src="/images/icons/right-caret.svg"> </button>
                     </section>
         
             </section>
@@ -132,7 +132,7 @@
                             </li>
                             <li><a href="#bruxArt">Art & Design</a>
                             </li>
-                            <ul>
+                            <ul class="tab">
                                 <li> <a href="#bruxChr">Character Design</a> </li>
                                 <li> <a href="#bruxGraphics">Colorways & Aesthetics</a> </li>
                                 <li> <a href="#bruxVersions">Versions</a> </li>
@@ -336,6 +336,9 @@
     <!-- script -->
 
     <script src="/script.js"></script>
+    <script>
+        aFastCarousel('carousel');
+    </script>
 </body>
 
 </html>

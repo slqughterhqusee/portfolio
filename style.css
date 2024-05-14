@@ -365,10 +365,33 @@ nav section p:hover {
 
 /* story landing styling*/
 
-.carousel img {
+div img{
     width: 50%;
+}
+
+.carousel div{
+    animation: slowfade 1.2s ease-out forwards;
+}
+
+.carousel-tall{
+    width: 30%;
     /* edit talls to 1050px height photopea */
     /* for squares, 475px x 355px */
+}
+
+div p{
+    margin-top: .5em;
+    width: 60%;
+}
+
+@keyframes slowfade{
+    from{
+        opacity: .2;
+    }
+
+    to{
+        opacity: 1;
+    }
 }
 
 .carousel-but button {
@@ -990,6 +1013,7 @@ iframe {
 .landing-foot {
     margin-top: 3em;
     margin-bottom: 1.5em;
+    width: 100%;
 }
 
 .black {
@@ -1115,7 +1139,7 @@ iframe {
 
         100% {
             opacity: 1;
-            height: 100%;
+            height: auto;
         }
     }
 
@@ -1123,6 +1147,7 @@ iframe {
         height: 100px;
         width: 100%;
         border-bottom: 1px solid white;
+        font-size: 1.5em;
     }
 
     nav section img{
@@ -1137,6 +1162,8 @@ iframe {
     .port-wrapper, .wrapper{
         display: flex;
         flex-flow: column;
+        justify-content: center;
+        align-items: center;
         height: fit-content;
     }
 
@@ -1235,6 +1262,10 @@ iframe {
         flex-flow: column;
         justify-content: center;
         align-items: center;
+    }
+
+    .media-nowrap{
+        flex-wrap: nowrap;
     }
 
     .home-eyes img{

@@ -66,7 +66,7 @@
                             </small></p>
                     </div>
                     <div class="slide column">
-                        <img src="/images/myopic/caba-hair.gif" alt="">
+                        <img class="carousel-tall" src="/images/myopic/caba-hair.gif" alt="">
                         <p><small>
                                 A collection of possible hair choices for Caba. Since she's an android, her hair is
                                 easily replacable, and I had a lot of fun playing around with the concept of how she'd
@@ -90,8 +90,8 @@
                 <br>
 
                 <section class="carousel-but row">
-                    <button id="myoBack"> <img src="/images/icons/left-caret-svg.svg"> </button>
-                    <button id="myoFor"> <img src="/images/icons/right-caret.svg"> </button>
+                    <button id="backward"> <img src="/images/icons/left-caret-svg.svg"> </button>
+                    <button id="forward"> <img src="/images/icons/right-caret.svg"> </button>
                 </section>
 
 
@@ -122,9 +122,9 @@
 
                         <section class="index">
                             <ul>
-                                <a href="#myoIntro">Intro</a>
-                                <a href="#myoOutline">Story Outline</a>
-                                <a href="#myoArt">Art & Design</a>
+                                <li><a href="#myoIntro">Intro</a></li>
+                                <li><a href="#myoOutline">Story Outline</a></li>
+                                <li><a href="#myoArt">Art & Design</a></li>
                                 <ul>
                                     <li> <a href="#myoChr">Character Design</a> </li>
                                     <li> <a href="#myoGraphics">Colorways & Aesthetics</a> </li>
@@ -356,6 +356,9 @@
 
         <!-- script -->
         <script src="/script.js"></script>
+        <script>
+            aFastCarousel('carousel');
+        </script>
 
 </body>
 

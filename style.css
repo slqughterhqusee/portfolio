@@ -511,6 +511,10 @@ iframe {
     height: 500px;
 }
 
+.writing-head{
+    align-self: center;
+}
+
 /* home styling */
 
 .home-eyes img {
